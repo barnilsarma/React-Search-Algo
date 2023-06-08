@@ -1,38 +1,85 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Geologica:wght@100&family=Quicksand:wght@300&display=swap');
+header{
+  position:sticky;
+  top:0;
   text-align: center;
+  background-color: #dfdfebb4;
+  padding-top: 3cm;
+  padding-bottom: 3cm;
+  backdrop-filter: blur(1px);
+  background-image: url('./pattern.svg');
+  background-repeat: no-repeat;
+  background-position: bottom left;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+header #search-bar{
+  position:relative;
+  top:0px;
+  font-family: 'Geologica', sans-serif;
+  height:1cm;
+  width:50%;
+  border:0px solid transparent;
+  border-radius: 1cm;
+  border-top-right-radius: 0;
+  border-bottom-right-radius:0;
+  outline:none ;
+  box-shadow: 0 0 10px #cacadd;
+  transition-duration:0.3s ;
+  padding-left: 1cm;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+header #search-button{
+  position:relative;
+  top:13px;
+  height:1cm;
+  width:1cm;
+  font-family: 'Geologica', sans-serif;
+  border:0px solid transparent;
+  border-radius: 1cm;
+  border-top-left-radius: 0;
+  border-bottom-left-radius:0;
+  outline:none ;
+  transition-duration:0.3s;
+  background-color: #317fe6;
+  color:#ffffff;
+  background-image: url('./SearchBtn.svg');
+  background-repeat: no-repeat;
+  background-size: 60% 60%;
+  background-position: center;
+}
+header #search-button:hover{
+  background-color: #ffae00;
+  color:#ffffff;
+  transition-duration: 0.3s;
+}
+header #opening{
+  animation-name: opening;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  width:fit-content;
+}
+@keyframes opening {
+  0%{
+    position:relative;
+    left:75%;
+    opacity: 0;
+  }
+  100%{
+    position: relative;
+    left:30%;
+    opacity:1;
   }
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+#main-text{
+  font-family: 'Quicksand', sans-serif;
+  margin:1cm;
+  word-spacing: 15px;
+  letter-spacing: 1px;
+  text-align: justify;
+  font-weight: 800;
+  font-size: 0.3cm;
+  color:#0d0924;
 }
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+[id*="found-text"]{
+  color:#317fe6;
+  font-size: 0.5cm;
 }
